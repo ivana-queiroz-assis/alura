@@ -10,11 +10,16 @@ import br.com.alura.loja.modelo.Projeto;
 
 @Path("projetos")
 public class ProjetoResource {
+	
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
-	public String busca() {
+	public String busca() {		
 		Projeto p= new ProjetoDAO().busca(1l);
+		System.out.println(p.toXML());
 		return p.toXML();
 	}
 }
+
+
+
 
