@@ -3,13 +3,20 @@ package br.com.alura.loja;
 import java.io.IOException;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import com.thoughtworks.xstream.XStream;
+
+import br.com.alura.loja.modelo.Carrinho;
+import br.com.alura.loja.modelo.Produto;
 import br.com.alura.loja.modelo.Projeto;
 
 public class ProjectTest {
@@ -36,9 +43,11 @@ public class ProjectTest {
 		System.out.println(cont);
 		Projeto p= (Projeto) new XStream().fromXML(cont);
 		Assert.assertEquals("Minha loja", p.getNome());
-				
+					
 	}
 	
+	
+
 	
 	
 }

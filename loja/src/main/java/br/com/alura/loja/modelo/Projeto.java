@@ -1,5 +1,9 @@
 package br.com.alura.loja.modelo;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import com.google.gson.Gson;
 import com.thoughtworks.xstream.XStream;
 
@@ -8,6 +12,7 @@ public class Projeto {
 	private String nome;
 	private long id;
 	private int anoInicio;
+
 	
 	public Projeto(String nome, long id, int anoInicio) {
 		this.nome=nome;
@@ -41,5 +46,7 @@ public class Projeto {
 	public String toJson() {
 		return new Gson().toJson(this);
 	}
+	
+	
 	
 }
