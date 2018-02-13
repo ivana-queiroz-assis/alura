@@ -25,10 +25,10 @@ public class ProjetoResource {
 	@Path("{id}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public String busca(@PathParam("id") long id) {		
+	public Projeto busca(@PathParam("id") long id) {		
 		Projeto p= new ProjetoDAO().busca(id);
 		System.out.println(p.toJson());
-		return p.toJson();
+		return p;
 	}
 	
 	@POST
